@@ -1,0 +1,138 @@
+import random as rd
+
+
+
+def game():
+    choice = int(input("What do you choose?\n Type 1 for Rock, 2 for paper and 3 for  scissors "))
+
+    computer_choice = rd.randint(1,3)
+    if choice == 1:
+        print("""
+            _______
+        ---'   ____)
+            (_____)
+            (_____)
+            (____)
+        ---.__(___)
+        """)
+        if computer_choice == 1:
+            print("""
+                _______
+            ---'   ____)
+                (_____)
+                (_____)
+                (____)
+            ---.__(___)
+            """)
+            print('Draw')
+        elif computer_choice == 2:
+            print("""
+                _______
+            ---'    ____)____
+                    ______)
+                    _______)
+                    _______)
+            ---.__________)
+            """)
+            
+            print('You win')
+        else:
+            print("""
+                _______
+            ---'   ____)____
+                    ______)
+                __________)
+                (____)
+            ---.__(___)
+            """)
+            print("You lose .Try again!")
+    elif choice == 2:
+        print("""
+            _______
+        ---'    ____)____
+                ______)
+                _______)
+                _______)
+        ---.__________)
+        """)
+        if computer_choice == 1:
+            print("""
+                _______
+            ---'   ____)
+                (_____)
+                (_____)
+                (____)
+            ---.__(___)
+            """)
+            print('You lose .Try again!')
+        elif computer_choice == 2:
+            print("""
+                _______
+            ---'    ____)____
+                    ______)
+                    _______)
+                    _______)
+            ---.__________)
+            """)
+            
+            print('Draw')
+        else:
+            print("""
+                _______
+            ---'   ____)____
+                    ______)
+                __________)
+                (____)
+            ---.__(___)
+            """)
+            print("You win")
+    elif choice == 3:
+        print("""
+            _______
+        ---'   ____)____
+                ______)
+            __________)
+            (____)
+        ---.__(___)
+        """)
+        if computer_choice == 1:
+            print("""
+                _______
+            ---'   ____)
+                (_____)
+                (_____)
+                (____)
+            ---.__(___)
+            """)
+            print('You lose .Try again!')
+        elif computer_choice == 2:
+            print("""
+                _______
+            ---'    ____)____
+                    ______)
+                    _______)
+                    _______)
+            ---.__________)
+            """)
+            
+            print('You win')
+        else:
+            print("""
+                _______
+            ---'   ____)____
+                    ______)
+                __________)
+                (____)
+            ---.__(___)
+            """)
+            print("Draw")
+
+    again = input("Do you want to play again ? Enter yes or no ").lower()
+    if again == "no":
+        return
+    elif again == "yes":
+        game()
+game()
+
+
+
