@@ -1,0 +1,72 @@
+logo = '''
+ _____________________
+|  _________________  |
+| | PS           0. | |
+| |_________________| |
+|  ___ ___ ___   ___  |
+| | 7 | 8 | 9 | | + | |
+| |___|___|___| |___| |
+| | 4 | 5 | 6 | | - | |
+| |___|___|___| |___| |
+| | 1 | 2 | 3 | | x | |
+| |___|___|___| |___| |
+| | . | 0 | = | | / | |
+| |___|___|___| |___| |
+|_____________________|
+
+'''
+print(logo)
+
+
+def add(n1, n2):
+  return n1 + n2
+  
+def subtract(n1, n2):
+  return n1 - n2
+  
+def multiply(n1, n2):
+  return n1 * n2
+
+def divide(n1, n2):
+  return n1 / n2
+
+operations = {"+":add , "-":subtract , "*":multiply , "/":divide }
+
+
+
+
+
+def main():
+  n1= int(input("Enter 1st number "))
+
+  n2= int(input("Enter 2nd number "))
+
+  for i in operations:
+    print(i,end=" ")
+
+  symbol = input(" pick an operation ")
+  
+  if symbol == "+":
+    answer=add(n1,n2)
+    print(f"{n1} + {n2} = {answer}")
+    
+  elif symbol == "-":
+    answer=subtract(n1,n2)
+    print(f"{n1} - {n2} = {answer}")
+    
+  elif symbol == "*":
+    answer=multiply(n1,n2)
+    print(f"{n1} * {n2} = {answer}")
+    
+  elif symbol == "/":
+    answer=divide(n1,n2)
+    print(f"{n1} / {n2} = {answer}")
+  
+  again = input("Do you want to Calculate again ? Enter yes or no ").lower()
+  if again == "no":
+      return
+  elif again == "yes":
+      main()
+
+  
+main()  
